@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Interactive comments section</title>
+  
+  <!-- Inline styles for specific elements -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    .delete-button:hover { color: #f80008; }
+    .edit-button:hover { color: #4c5eff; }
   </style>
 </head>
 <body>
 
   <div class="container">
     <div class="comment-container">
-      <!-- Comment 1 -->
+      <!-- Start of Comment 1 -->
       <div class="comment large">
         <div class="comment-content">
+          <!-- Content for Comment 1 -->
           <div class="like-button">
             <button class="like-up"><img src="./images/icon-plus.svg" alt="Plus Icon"></button>
             <span class="like-count">12</span>
             <button class="like-down"><img src="./images/icon-minus.svg" alt="Minus Icon"></button>
           </div>
           <div class="comment-body">
+            <!-- User info and comment text for Comment 1 -->
             <div class="info-text">
               <img src="./images/avatars/image-amyrobson.png" alt="Amy Robson Profile Picture" class="profile-pic-small">
               <div class="username">amyrobson</div>
@@ -34,19 +41,22 @@
               <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.</p>
             </div>
           </div>
+          <!-- Reply button for Comment 1 -->
           <button class="reply-button"><img src="./images/icon-reply.svg" alt="Reply Icon"> Reply</button>
         </div>
       </div>
 
-      <!-- Comment 2 with replies -->
+      <!-- Start of Comment 2 -->
       <div class="comment large">
         <div class="comment-content">
+          <!-- Content for Comment 2 -->
           <div class="like-button">
             <button class="like-up"><img src="./images/icon-plus.svg" alt="Plus Icon"></button>
-            <span class="like-count">12</span>
+            <span class="like-count">5</span>
             <button class="like-down"><img src="./images/icon-minus.svg" alt="Minus Icon"></button>
           </div>
           <div class="comment-body">
+            <!-- User info and comment text for Comment 2 -->
             <div class="info-text">
               <img src="./images/avatars/image-maxblagun.png" alt="Max Blagun Profile Picture" class="profile-pic-small">
               <div class="username">maxblagun</div>
@@ -56,69 +66,77 @@
               <p>Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!</p>
             </div>
           </div>
+          <!-- Reply button for Comment 2 -->
           <button class="reply-button"><img src="./images/icon-reply.svg" alt="Reply Icon"> Reply</button>
         </div>
       </div>
 
-      <!-- Reply 1 to Comment 2 -->
+      <!-- Start of Reply 1 to Comment 2 -->
       <div class="comment small">
         <div class="comment-content">
+          <!-- Content for comment 3 -->
           <div class="like-button">
             <button class="like-up"><img src="./images/icon-plus.svg" alt="Plus Icon"></button>
-            <span class="like-count">12</span>
+            <span class="like-count">4</span>
             <button class="like-down"><img src="./images/icon-minus.svg" alt="Minus Icon"></button>
           </div>
           <div class="comment-body">
+            <!-- User info and comment text for comment 3 -->
             <div class="info-text">
               <img src="./images/avatars/image-ramsesmiron.png" alt="Ramses Miron Profile Picture" class="profile-pic-small">
               <div class="username">ramsesmiron</div>
               <div class="comment-time">1 week ago</div>
             </div>
             <div class="comment-text">
-              <p>If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.</p>
+              <p><span class="mention">@maxblagun</span> If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.</p>
             </div>
           </div>
+          <!-- Reply button for comment 3 -->
           <button class="reply-button"><img src="./images/icon-reply.svg" alt="Reply Icon"> Reply</button>
         </div>
       </div>
 
-      <!-- Reply 2 to Reply 1 -->
+      <!-- Start of Reply 2 to Reply 1 -->
       <div class="comment small">
         <div class="comment-content">
+          <!-- Content for comment 4 -->
           <div class="like-button">
             <button class="like-up"><img src="./images/icon-plus.svg" alt="Plus Icon"></button>
-            <span class="like-count">12</span>
+            <span class="like-count">2</span>
             <button class="like-down"><img src="./images/icon-minus.svg" alt="Minus Icon"></button>
           </div>
           <div class="comment-body">
+            <!-- User info and comment text for comment 4 -->
             <div class="info-text">
               <img src="./images/avatars/image-juliusomo.png" alt="Julius Omo Profile Picture" class="profile-pic-small">
               <div class="username">juliusomo</div>
+              <div class="you-tag">you</div>
               <div class="comment-time">2 days ago</div>
             </div>
             <div class="comment-text">
-              <p>I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.</p>
+              <p><span class="mention">@ramsesmiron</span> I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.</p>
             </div>
           </div>
+          <!-- Delete and Edit buttons for comment 4 -->
           <button class="delete-button"><img src="./images/icon-delete.svg" alt="Delete Icon"> Delete</button>
           <button class="edit-button"><img src="./images/icon-edit.svg" alt="Edit Icon"> Edit</button>
         </div>
       </div>
     </div>
 
-    <!-- Add Comment Section -->
+    <!-- Add a new comment -->
     <div class="add-comment-container">
       <img src="./images/avatars/image-juliusomo.png" alt="Julius Omo Profile Picture" class="profile-pic">
       <textarea class="add-comment" placeholder="Add a comment..."></textarea>
-      <button class="send-button">SEND</button>
+      <button class="send-button"><span class="send-text">SEND</span></button>
     </div>
   </div>
   
-  <!-- Extra -->
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Richie van der Heij</a>
-    </div>
+  <!-- Attribution for the challenge and coding credits -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Richie van der Heij</a>
+  </div>
 
 </body>
 </html>
