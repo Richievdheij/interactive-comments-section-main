@@ -1,196 +1,290 @@
+/* General body styling */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Rubik', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #F5F6FA;
-  }
-  
-  .container {
-    background-color: #F5F6FA;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .comment-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  
-  .comment {
-    background-color: #ffffff;
-    padding: 15px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    position: relative;
-  }
-  
-  .comment.large {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    width: 730px;
-    height: auto;
-  }
-  
-  .comment.small {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    width: 642px;
-    height: auto;
-  }
-  
-  .comment-content {
-    display: flex;
-    align-items: flex-start;
-  }
-  
-  .like-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 100px;
-    background-color: #F5F6FA;
-    border-radius: 8px;
-    margin-right: 20px;
-    gap: 5px;
-  }
-  
-  .like-up, .like-down {
-    color: #C5C6EF;;
-    border: none;
-    background: none;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-  .like-count {
-    color: #5357B6;
-    font-size: 16px;
-    margin: 5px 0;
-  }
-  
-  .comment-body {
-    width: 100%;
-  }
-  
-  .info-text {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .profile-pic-small {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .username {
-    color: #334253;
-    font-size: 16px;
-    font-weight: bold;
-    margin-right: 13px;
-  }
-  
-  .comment-time {
-    font-size: 16px;
-    color: #67727E;
-    margin-right: 10px;
-  }
-  
-  .reply-button {
-    background-color: #ffffff;
-    border: none;
-    color: #5357B6;
-    font-weight: 600;
-    border-radius: 8px;
-    padding: 8px 16px;
-    font-family: 'Rubik', sans-serif;
-    cursor: pointer;
-    transition: 0.3s ease;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .reply-button img {
-    margin-right: 5px;
-  }
-  
-  .reply-button:hover {
-    color: #4c5eff;
-  }
-  
-  .comment-text {
-    font-size: 16px;
-  }
-  
-  .add-comment-container {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    width: 730px;
-    height: 144px;
-    background-color: #ffffff;
-    padding: 15px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .profile-pic {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 20px;
-  }
-  
-  .add-comment {
-    width: 506px;
-    height: 96px;
-    border-radius: 8px;
-    padding: 10px;
-    box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
-    border: 1px solid #ddd;
-    resize: none;
-  }
-  
-  .send-button {
-    width: 100px;
-    height: 40px;
-    background-color: #5357B6;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    font-family: 'Rubik', sans-serif;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
-  
-  .send-button:hover {
-    background-color: #4c5eff;
-  }
-  
-  .attribution {
-    font-size: 11px; 
-    text-align: center; 
-    position: absolute; 
-    bottom: 10px;
-  }
-  
-  .attribution a { 
-    color: hsl(228, 45%, 44%); 
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #F5F6FA;
+}
+
+/* Main container styling */
+.container {
+  background-color: #F5F6FA;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Container for comments, aligned to the right */
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Basic styling for each comment */
+.comment {
+  background-color: #ffffff;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Styling for large comments */
+.comment.large {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 730px;
+  height: auto;
+  overflow: hidden;
+}
+
+/* Styling for small comments */
+.comment.small {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 642px;
+  height: auto;
+  overflow: hidden;
+}
+
+/* Layout for comment content */
+.comment-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Styling for mention text */
+.mention {
+  color: #5357B6;
+  font-weight: bold;
+}  
+
+/* Layout and styling for the like buttons section */
+.like-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 100px;
+  background-color: #F5F6FA;
+  border-radius: 8px;
+  margin-right: 20px;
+  gap: 5px;
+}
+
+/* Transition effects for like button images */
+.like-button img {
+  transition: 0.3s;
+}
+
+.like-button button:hover img {
+  transform: scale(1.3);
+}
+
+.like-button button:active img {
+  transform: scale(0.9);
+}
+
+/* Button styling for like buttons */
+.like-up, .like-down {
+  color: #C5C6EF;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Styling for like count */
+.like-count {
+  color: #5357B6;
+  font-size: 16px;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+/* Layout for the comment body */
+.comment-body {
+  width: 100%;
+}
+
+/* Layout and styling for the user info section */
+.info-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Styling for profile pictures */
+.profile-pic-small {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* Styling for usernames */
+.username {
+  color: #334253;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 13px;
+}
+
+/* Styling for the "you" tag indicator */
+.you-tag {
+  background-color: #5357B6;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  margin-right: 10px;
+}
+
+/* Styling for the comment time */
+.comment-time {
+  font-size: 16px;
+  color: #67727E;
+  margin-right: 10px;
+}
+
+/* Styling for reply buttons */
+.reply-button {
+  background-color: #ffffff;
+  border: none;
+  color: #5357B6;
+  font-weight: 600;
+  padding: 8px 16px;
+  font-family: 'Rubik', sans-serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for images in reply, delete, and edit buttons */
+.reply-button img, .delete-button img, .edit-button img {
+  margin-right: 7px;
+}
+
+/* Hover effect for reply buttons */
+.reply-button:hover {
+  color: #4c5eff;
+}
+
+/* Styling for edit buttons */
+.edit-button {
+  background-color: #ffffff;
+  border: none;
+  color: #5357B6;
+  font-weight: 600;
+  padding: 8px 16px;
+  font-family: 'Rubik', sans-serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for delete buttons */
+.delete-button {
+  background-color: #ffffff;
+  border: none;
+  color: #ED6368;
+  font-weight: 600;
+  padding: 8px 16px;
+  font-family: 'Rubik', sans-serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: absolute;
+  top: 15px;
+  right: 80px;
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for comment text */
+.comment-text {
+  font-size: 16px;
+}
+
+/* Layout and styling for the add comment section */
+.add-comment-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 730px;
+  height: 144px;
+  background-color: #ffffff;
+  padding: 25px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Styling for profile picture in the add comment section */
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Styling for the comment text area */
+.add-comment {
+  width: 506px;
+  height: 96px;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  border: 1px solid #ddd;
+  resize: none;
+  transition: 0.5s;
+}
+
+/* Focus effect for the comment text area */
+.add-comment:focus {
+  outline: 1px solid #fff;
+}
+
+/* Styling for the send button */
+.send-button {
+  width: 100px;
+  height: 40px;
+  background-color: #5357B6;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Rubik', sans-serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Hover effect for the send button */
+.send-button:hover {
+  background-color: #4c5eff;
+}
+
+/* Styling for attribution text */
+.attribution {
+  font-size: 11px; 
+  text-align: center; 
+  position: absolute; 
+  bottom: 10px;
+}
+
+/* Styling for attribution links */
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
